@@ -1,0 +1,91 @@
+
+.my_crumb_color{
+    background: #F5F5F5;
+}
+.my_crumb{
+    color: #777;
+}
+#echat{
+    margin: auto;
+}
+.picture_width1{
+    width: 200px;
+}
+.picture_width2{
+    width: 20px;
+}
+.picture_width3{
+    width: 13px;
+    margin-right: 3px;
+}
+.my_header_size{
+    font-size: 18px;
+}
+.jianjie{
+    color: #9999A6;
+    font-size: 12px;
+}
+.my_size{
+    font-size: 12px;
+}
+.myPicture{
+    position: relative;
+    background: #F5F5F5;
+    width: 200px;
+}
+.myPicture>img{
+    width: 100%;
+    height: 50%;
+}
+.modal{
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+/*�Ŵ�*/
+#mask{
+    width: 100px;
+    height: 100px;
+    background: #ffa;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+#super-mask{
+  width:200px; height:150px;
+    top: 0;
+    left: 0;
+}
+.lg_picture{
+  width:400px; height:300px;
+  left:200px;
+  z-index:1000;
+  border: 1px solid rgba(0, 0, 0, 0.125)
+}
+/*����*/
+#comment>p{
+    width: 100%;
+    text-align: right;
+}
+#comment>p>button{
+    color: #fff;
+}
+
+
+#contain span{
+    font-size:15px;
+    margin-right: 10px;
+    color: #333333;
+}
+#contain>div>div>span:first-child{
+    font-size: 30px;
+}
+#contain>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+#contain p{
+    color: #999999;
+    margin-left: 40px;
+}

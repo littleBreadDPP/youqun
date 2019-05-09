@@ -1,0 +1,90 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/reg.css">
+	<link rel="stylesheet" href="css/conmm.css"/>
+</head>
+<body>
+<div class="main row">
+	<div class="col-sm-12 col-md-6 align-self-center">
+		<img src="./img/16.png" class="w-100" alt="">
+	</div>
+	<div class="col-sm-12 col-md-6 align-self-center">
+		<div id="registe">
+			<p>欢迎注册</p>
+			<span><a href="http://127.0.0.2:8080/login.html" class="login">直接登录</a></span>
+			<div>
+				<input class="my_height my_small" type="text" onblur="aa()" id="uname" placeholder="请输入用户名"><span id="s1" ></span>
+			</div>
+			<div>
+				<input type="password"  class="my_small" id="upwd" placeholder="设置密码">
+			</div>
+			<div>
+				<input type="text"  class="my_small" id="email" placeholder="请输入邮箱">
+			</div>
+			<div>
+				<input type="text"  class="my_small" id="phone" placeholder="请输入手机号">
+			</div>
+			<div class="auto">
+				<input type="checkbox" id="remember">
+				我已经阅读并接受<span><a href="#">《用户注册协议》</a></span>
+			</div>
+			<button onclick="bb()" disabled>登录</button>
+		</div>
+	</div>
+</div>
+<script>
+	function aa(){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				if(result==1){s1.innerHTML="用户名已存在"}
+				else{s1.innerHTML="用户名可使用"}
+			}
+		}
+		xhr.open("get","/mypro/reg1?uname="+uname.value,true);
+		xhr.send(null);
+	}
+	function bb(){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				if(result==1){
+					alert("注册成功");
+					location.href='http://127.0.0.2:8080/index.html';
+				}
+				else{alert("注册失败")};
+			}
+		}
+		xhr.open("post","/mypro/reg2",true);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value;
+		xhr.send(formdata);
+	}
+</script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+	var $nb=$(":checkbox");
+	$nb.on("click",function(){
+		var $orthers=$(":input:not(:checkbox)");
+		var $nb=$(this);
+		if($nb.is(":checked")){
+			$orthers.prop("disabled",false)
+		}else{
+			$orthers.prop("disabled",true);
+		}
+	})
+</script>
+</body>
+</html>

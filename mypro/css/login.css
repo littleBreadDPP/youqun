@@ -1,0 +1,65 @@
+.row{
+    margin: 0;
+}
+*{
+    margin:0;padding:0
+}
+body{
+    background-image: url(../img/login2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#registe{
+    margin:150px auto;
+    width:270px;
+    height:330px;
+    padding:10px;
+    background:rgba(0,0,0,0.2);
+    border-radius:13px;
+    text-align:center;
+    color:#fff;
+    padding-top:40px;
+}
+.main #register img{
+    line-height:30px;
+    width:50px;
+    height:30px;
+}
+p{
+    font-size:15px;
+    width:200px;
+    height:20px;
+    line-height:20px;
+    text-align:right;
+    margin-top:10px;
+    margin-left:20px;
+}
+#register span{position:relative;left:50px;}
+a:hover{
+    color:#f4d020;
+}
+#uname,#upwd{
+    display:block;
+    width:200px;
+    height:30px;
+    margin:10px auto;
+    margin-bottom:20px;
+}
+.auto{
+    font-size:15px;
+    margin-left:12.5px;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+.auto span{
+    margin-left:50px;
+}
+button{
+    background:#E45A27;
+    width:200px;
+    height:30px;
+    color:#fff;
+    font-size:15px;
+}

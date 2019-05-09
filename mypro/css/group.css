@@ -1,0 +1,51 @@
+
+.navbar{
+    background:rgba(0,0,0,0.1);
+}
+.btn-default{
+    background: #fff;
+    color: #333333;
+    border-color: #ccc;
+}
+.btn-default:hover{
+    background: #e6e6e6;
+    color: #333333;
+    border-color: #adadad;
+}
+.card{
+    box-shadow:2px 2px 3px 0px #eee ;
+    width: 90%;
+}
+.card>a>img{
+    padding: 5px;
+}
+.card>a>div>h5{
+    height: 20px;
+    font-size: 18px;
+    overflow: hidden;
+}
+.text-color{
+    color: #333;
+}
+.my_size{
+    font-size: 16px;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #f4d020;
+    border-color: #f4d020;
+}
+.truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    max-width: 150%;
+}
+.picture:hover{
+    transform:scale(1.1);
+    transition: 1s;
+}

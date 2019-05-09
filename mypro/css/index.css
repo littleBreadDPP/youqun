@@ -1,0 +1,414 @@
+/*创建活动、社群*/
+.modal-content{
+	width: 90%;
+}
+.hide{ display: none; }
+.modal-body>select{
+  margin: 10px 0;
+}
+.modal-body>input{
+	margin-bottom: 10px;
+}
+.charge{
+  display: none;
+}
+.charge>input{
+	font-size: 14px;
+	margin-left: 80px;
+	width: 30%;
+	border-radius: 5px;
+}
+.charge>span{
+	color: red;
+	font-size: 14px;
+}
+/*中间部分*/
+.container{
+	text-align:center;
+	margin-bottom: 50px;
+}
+.container>div~div{
+	margin-top: 50px;
+}
+#floor1{
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}
+#floor1>span{
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 5px;
+	background:rgba(6,6,6,0.2);
+	z-index: 10;
+	font-size: 30px;
+	color: #999;
+	text-align: center;
+}
+.pre{
+	top: 170px;
+	left:40px;
+}
+.next{
+	top: 170px;
+	right: 40px;
+}
+#show{
+	width: 100%;
+	height: 400px;
+	list-style: none;
+}
+#show>li>img{
+	width: 80%;
+	height: 100%;
+}
+#show>li{
+	position: absolute;
+	transition: all 1.5s;
+	height: 100%;
+}
+.position-absolute{
+	top: 0;
+	left: 0;
+}
+.b1{
+	z-index: 7;
+	transform:scale(0.8) translateZ(20px);
+	opacity: 0.6;
+}
+.b2{
+	z-index:8;
+	transform: translate(-140px,0) scale(0.9) translateZ(70px);
+	opacity: 0.7;
+}
+.b3{
+	z-index:9;
+	width: 90%;
+	transform: translateX(52px);
+
+}
+.b4{
+	z-index:8;
+	transform: translate(140px,0) scale(0.9) translateZ(-70px);
+	opacity: 0.7;
+}
+.b5{
+	z-index:7;
+	transform:scale(0.8) translateZ(-70px);
+	opacity: 0.6;
+}
+.b6{
+	z-index:6;
+	transform:scale(0.7);
+	opacity: 0;
+}
+.pre,.next{
+	cursor: pointer;
+}
+
+
+@media (min-width:992px){
+	#show>li>img{
+		width: 80%;
+	}
+}
+@media (max-width:991px) and (min-width:768px){
+	#show>li>img{
+		width: 70%;
+	}
+	.pre{
+		top: 120px;
+		left:30px;
+	}
+	.next{
+		top: 120px;
+		right: 30px;
+	}
+	.b3{
+		transform: translateX(0);
+		width: 100%;
+	}
+	#floor1{
+		height: 300px !important;
+	}
+	#show{
+		height: 300px !important;
+	}
+}
+@media (max-width:767px){
+	#show>li>img{
+		width: 60%;
+	}
+	.pre{
+		top: 70px;
+		left:20px;
+	}
+	.next{
+		top: 70px;
+		right: 20px;
+	}
+	.b3{
+		transform: translateX(0);
+		width: 100%;
+	}
+	#floor1{
+		height: 200px !important;
+	}
+	#show{
+		height: 200px !important;
+	}
+}
+.intro>span,.recommend>span{
+	font-size:28px;
+}
+.actives{
+	text-align:left;
+	margin: 0 auto;
+}
+.actives h3{
+	width:75%;
+	height:60px;
+	line-height:60px;
+	margin:20px auto;
+	border-radius:5px;
+	background:#FCCE54;
+	font-size:20px;
+	text-align:center;
+	color:#333333;
+}
+.actives div div  h3.group_title{
+	background:#F78054;
+}
+.actives div ul{
+	margin: 0 auto;
+	width:75%;
+	list-style:none;
+}
+.actives div ul li{
+	margin: 0 auto;
+	width:80%;
+	height:45px;
+	padding-left:60px;
+	background:rgba(252,206,75,0.7);
+	margin-bottom:8px;
+	border-radius:5px;
+	color:#333333;
+	line-height:45px;
+}
+.actives div ul li img{
+	width:30px;
+	height:30px;
+	vertical-align:middle;
+	margin-left:-40px;
+	margin-right:10px;
+	border-radius:50%;
+}
+.actives>div>div{
+	border-radius: 10px;
+	padding: 10px 0;
+}
+
+@keyframes aa{
+	0%{
+		background:#f5c6cb;
+	}
+	25%{
+		background:#FCEDE7;
+	}
+	50%{
+		background:#ffe8a1;
+	}
+	75%{
+		background:#FCEDE7;
+	}
+	100%{
+		background:rgba(9,9,9,0.1);
+	}
+}
+@keyframes bb{
+	0%{
+		background:#ffe8a1;
+	}
+	25%{
+		background:#FCEDE7;
+	}
+	50%{
+		background:rgba(9,9,9,0.1);
+	}
+	75%{
+		background:#FCEDE7;
+	}
+	100%{
+		background:#f5c6cb;
+	}
+}
+@keyframes cc{
+	0%{
+		background:rgba(9,9,9,0.1);
+	}
+	25%{
+		background:#FCEDE7;
+	}
+	50%{
+		background:#f5c6cb;
+	}
+	75%{
+		background:#FCEDE7;
+	}
+	100%{
+		background:#ffe8a1;
+	}
+}
+.active{
+	animation: aa 5s infinite;
+}
+.group{
+	animation: bb 5s infinite;
+}
+.part{
+	animation: cc 5s infinite;
+}
+.actives>div>div>ul>li:hover{
+	animation: bounceIn 0.5s;
+	cursor: pointer;
+ }
+/*热门推荐*/
+.recommend ul{
+	list-style:none;
+	display: flex;
+	justify-content: space-around;
+	padding: 0 50px;
+}
+
+.recommend li{
+	width: 220px;
+	height: 300px;
+	text-align: left;
+	transition: all 2s;
+}
+.recommend li>div{
+	border: none;
+	box-shadow: none;
+}
+.recommend ul>li>div>a>img{
+  border-radius: 3px;
+}
+.recommend li:hover {
+	box-shadow:0 0 5px 1px #FCCE54 ;
+	transition: all 0.5s;
+}
+.recommend>div{
+	position: relative;
+}
+.recommend>div>span{
+	width: 50px;
+	height: 50px;
+	line-height: 42px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	font-size: 35px;
+	text-align: center;
+	color: #FCCE54;
+	box-shadow:0 0 30px 2px #FCCE54 ;
+	cursor: pointer;
+
+}
+.recommend>div>span:hover{
+   color:#FDDE54;
+	box-shadow:0 0 25px 0 #FCCE54 ;
+}
+.recommend>div>span:nth-child(2){
+	top: 125px;
+	left: 0;
+
+}
+.recommend>div>span:nth-child(3){
+	top: 125px;
+	right: 0;
+}
+.r5,.r6,.r7,.r8,.r9,.r10,.r11,.r12{
+	display: none;
+}
+/*分类查找*/
+.lookup_title>span{
+	font-size: 28px;
+}
+.my_card>div>div{
+	overflow: hidden;
+	border-radius: 10px;
+}
+.my_card>div>div>a:hover div:first-child{
+	transform: scale(1.2);
+	transition: all 0.8s ease 0s;
+}
+.my_card>div>div>a:hover div:nth-child(2){
+	background:rgb(20,25,20);
+	opacity: 0.4;
+	transition: all 0.8s ease 0s;
+}
+.my_card>div>div div:nth-child(2){
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+.my_card>div>div div:nth-child(3)>p{
+	font-size: 0;
+}
+.my_card>div>div>a:hover div:nth-child(3)>p{
+	font-size: 16px;
+	transition: all 0.8s ease 0s;
+}
+.card1 div:nth-child(3){
+	top: 70px;
+	left: 75px;
+	color: #fff;
+}
+.card1>a:hover div:nth-child(3){
+	top: 40px;
+	transition: all 0.8s ease 0s;
+}
+
+.card2 div:nth-child(3),.card3 div:nth-child(3){
+	top: 70px;
+	left: 30px;
+	color: #fff;
+}
+.card2>a:hover div:nth-child(3),.card3>a:hover div:nth-child(3){
+	top: 50px;
+	transition: all 0.8s ease 0s;
+}
+/*楼层滚动*/
+.my_floor>ul>li.floor_active{background: #FCC000;}
+.my_floor{
+	position: fixed;
+	top: 230px;
+	left: 50px;
+}
+.my_floor>ul{
+	list-style: none;
+}
+.my_floor>ul>li{
+	width: 35px;
+	height: 60px;
+	line-height:15px ;
+	border:1px solid #fff;
+	background: #999;
+}
+.my_floor>ul>li~li{
+	border-top:1px dashed #fff;
+}
+.my_floor>ul>li>a{
+  font-size: 12px;
+	color: #fff;
+	word-wrap:break-word;
+	display: block;
+	margin-top: 15px;
+}

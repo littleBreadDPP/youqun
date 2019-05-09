@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/conmm.css"/>
+    <link rel="stylesheet" href="css/active.css"/>
+    <link rel="stylesheet" href="css/animation.css"/>
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <!-- 头部导航栏-->
+    <div class="row top">
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <a href="#" title="柚群"><img src="./img/logo.png" alt="" class="w-25 p-3 ml-5" />
+                <span>引爆社群价值</span></a>
+        </div>
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item mr-5">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/index.html">首页</a>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/active.html" >活动</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">运动户外</a></li>
+                        <li><a href="#" class="text-white">交友聚会</a></li>
+                        <li><a href="#" class="text-white">演出展览</a></li>
+                        <li><a href="#" class="text-white">亲子教育</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/group.html">社群</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">游戏兴趣类</a></li>
+                        <li><a href="#" class="text-white">学习考试类</a></li>
+                        <li><a href="#" class="text-white">社交聚会类</a></li>
+                        <li><a href="#" class="text-white">行业交流类</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a4">
+                    <a href="#" id="localname"></a>
+                    <ul class="a3">
+                        <li><a href="#" class="text-white">个人中心</a></li>
+                        <li><a href="#" class="text-white">注销</a></li>
+                    </ul>
+                    <a  class="nav-link p-0" href="http://127.0.0.2:8080/login.html">登录</a></li>
+                <li class="nav-item mr-5"><a  class="nav-link p-0" href="http://127.0.0.2:8080/reg.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <!-- 中间的内容-->
+    <div>
+        <!-- 导航栏-->
+        <div class="navbar  navbar-light mb-4 mt-5 p-0 pl-3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link my_small">首页  /  活动</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 视频推荐-->
+        <div id="active_video">
+            <h4 data-target="#video" data-toggle="modal"><span class="iconfont  iconshipin"></span>精彩视频</h4>
+            <div class="my_video">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/u=175298812,4205663943&fm=26&gp=0.jpg" alt=""/>
+                            <span class="iconfont iconbofang" data-target="#video" data-toggle="modal"></span>
+                            <div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/u=3572421743,1057696608&fm=11&gp=0.jpg" alt=""/>
+                            <span class="iconfont iconbofang" data-target="#video" data-toggle="modal"></span>
+                            <div></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal" id="video">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <span class="iconfont iconjiantouzuo"></span>
+                            <span class="iconfont iconjiantouyou"></span>
+                            <video preload="auto"  controls="controls" src="./img/1_HearthStone_HEA_2018-14334_hse_TB_Rastakhans_Rumble_zhCN_URL_ONLY_PK_small.mp4" class="big_video"></video>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="m-auto">
+                                <ul id="video_details">
+                                    <li class="video_show">
+                                        <a href="#" data-target="./img/1_HearthStone_HEA_2018-14334_hse_TB_Rastakhans_Rumble_zhCN_URL_ONLY_PK_small.mp4" >
+                                            <img src="./img/1527601192.jpeg" alt=""/><br/>
+                                            <span>定制户外运动，城市就是健身房体验</span>
+                                         </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-target="./img/1_HearthStone_BoomsdayProject.mp4">
+                                            <img src="./img/1527601248.png" alt=""/><br/>
+                                            <span>	揭秘清华北大10位状元学霸学习方法</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-target="./img/videolib_repo_1708_23_qTfyh4344_HD_qTfyh4344-mobile.mp4">
+                                            <img src="./img/20190110154649.png" alt=""/><br/>
+                                            <span>2019互联网+智能交通新趋势大会</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-target="./img/videolib_repo_1803_19_AORpS4903_HD_AORpS4903-mobile.mp4">
+                                            <img src="./img/1527601250.png" alt=""/><br/>
+                                            <span>【超级记忆训练营】一学就会的超级记忆法</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索-->
+        <div class="input-group mb-5 position-relative">
+            <input type="text" class="form-control my_small w-75"  id="match" placeholder="请输入搜索内容"/>
+            <button class="btn btn-default" onclick="search()">搜索</button>
+        </div>
+        <!-- 分类-->
+        <div class="relegate">
+            <h3>分类：</h3>
+            <ul>
+                <li><a href="#" class="disabled">全部</a></li>
+                <li><a href="#">亲子</a></li>
+                <li><a href="#">互联网</a></li>
+                <li><a href="#">创业</a></li>
+                <li><a href="#">培训</a></li>
+                <li><a href="#">兴趣</a></li>
+                <li><a href="#">运动</a></li>
+                <li><a href="#">情感</a></li>
+                <li><a href="#">交友聚会</a></li>
+                <li><a href="#">演出展览</a></li>
+                <li><a href="#">公益</a></li>
+            </ul>
+        </div>
+        <!-- 时间-->
+        <div class="time">
+            <h3>时间：</h3>
+            <ul>
+                <li><a href="#" class="disabled">不限</a></li>
+                <li><a href="#">今天</a></li>
+                <li><a href="#">本月</a></li>
+                <li><a href="#">本年</a></li>
+            </ul>
+        </div>
+        <!-- 活动界面-->
+        <div class="row m-auto pb-5 actives">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+        </div>
+        <div class="row m-auto pb-5 actives" >
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+        </div>
+        <div class="row m-auto pb-5 actives">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+        </div>
+        <div class="row m-auto pb-5 actives">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+            </div>
+        </div>
+    </div>
+    <!-- 底下的分页-->
+    <ul class="pagination pagination-sm mb-5">
+
+    </ul>
+</div>
+<footer>
+    <div class="row foot1 text-white my_small align-items-center p-2">
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">关于柚群 </dt>
+                <dd class="my_act">用户协议</dd>
+                <dd class="my_act">产品介绍</dd>
+                <dd class="my_act">团队简介</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl class="main">
+                <dd class="my_act">版权说明</dd>
+                <dd class="my_act">帮助中心</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">联系我们</dt>
+                <dd>
+                    商务咨询：138-9199-5640（专线）
+                </dd>
+                <dd>
+                    客服热线：177-4232-9144（专线）
+                </dd>
+                <dd>
+                    办公地址：西安市碑林区南二环西段69号创新设计中心1409
+                </dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <ul class="list-unstyled">
+                <li><p>微信官方公众号</p></li>
+                <li><img src="./img/QRcode.jpg" class="w-25" alt=""></li>
+                <li><p class="m-0">搜索："柚群"</p></li>
+                <li>
+                    <div id="pop-up">
+                        <button class="shut">&times;</button>
+                        <img src="./img/QRcode.jpg" class="w-75">
+                        <a href="#">扫一扫</a>
+                        <a href="#">进入柚群手机版</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row foot2 p-2 my_small">
+        <div class="col-sm-12 col-lg-6 foot2_left">
+            <span class="text-white">版权所有：西安美刻信息科技有限公司</span>
+        </div>
+        <div class="col-sm-12 col-lg-6 foot2_right">
+            <span><a href="#" class="text-white">陕ICP备16001937号-3</a></span>
+        </div>
+    </div>
+</footer>
+<script src="./js/jquery-1.11.3.js"></script>
+<script>
+	//更换登录名
+	$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+	var name=sessionStorage.getItem("key");
+	if(name.indexOf("欢")!==-1){
+		console.log(1)
+		$("#localname").removeClass("none").html(name).parent().addClass("a4").children(":last-child").addClass("none").parent().next().addClass("none");
+	}else{
+		console.log(2)
+		
+	}
+	$(".a3>li:last-child").click(function(){
+		if(confirm("确认注销吗？")){
+			sessionStorage.removeItem("key");
+			$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+		}
+	})
+    //右边固定栏
+    var shut=document.getElementsByClassName("shut")[0];
+    var pop_up=document.getElementById("pop-up");
+    shut.onclick=function(){
+        pop_up.className="none";
+    }
+
+    //点击搜索功能
+    $("#match").keyup(function(event){
+        if(event.keyCode==13){
+            search()
+        }
+    })
+    function search(){
+        var actives=document.querySelectorAll("div.actives>div");
+        for(var j=0;j<actives.length;j++){
+            actives[j].innerHTML="";
+        }
+        var kw=$("#match").val();
+        $.ajax({
+            url:"/mypro/active",
+            type:"get",
+            data:{kwords:kw},
+            success:function(result){
+                var arr=result.data;
+                console.log(result);
+                var actives=document.querySelectorAll("div.actives>div");
+                for(var i=0;i<arr.length;i++){
+                    actives[i].innerHTML=`
+                        <div class="card">
+                            <div class="prompt">
+                                <div class="prompt_name">${arr[i].state}</div>
+                                <div class="situation"></div>
+                            </div>
+                            <a href="active_details.html?photo=${arr[i].photo}" class="m-1" title="活动海报">
+                                <img src="${arr[i].photo}" class="picture" alt=""/>
+                            </a>
+                            <a href="active_details.html?photo=${arr[i].photo}" title="柚群活动详情">
+                                <div class="card_intr">
+                                    <h3>${arr[i].aname}</h3>
+                                    <p>
+                                        <img src="./img/17.png" alt=""/>${arr[i].time}
+                                    </p>
+                                    <p>
+                                        <img src="./img/18.png" alt=""/>${arr[i].address}
+                                    </p>
+                                    <div>
+                                        <span class="my_small number"><img src="./img/19.png"  alt=""/>${arr[i].anumber}</span>
+                                        <span class="my_color">${arr[i].money}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                }
+                var html1=""
+                for(var k= 1;k<=result.pageCount;k++){
+                    html1+=`<li class='page-item'>
+                        <a href='#' class='page-link'>${k}</a>
+                    </li>`
+                }
+                $(".pagination").html(`
+                    <li class='page-item disabled'>
+                        <a href='#' class='page-link'>首页</a>
+                    </li>
+                    ${html1}
+                    <li class='page-item'>
+                        <a href='#' class='page-link'>尾页</a>
+                  </li>`)
+            }
+
+        })
+    }
+    //分类/时间
+    var a,b;
+    $(".relegate>ul>li").click(function(){
+        $(this).children().addClass("disabled");
+        $(this).siblings().children().removeClass("disabled");
+        var actives=document.querySelectorAll("div.actives>div");
+        for(var j=0;j<16;j++){
+            actives[j].innerHTML="";
+        }
+        a=this.textContent
+        ClassSearch(a,b);
+    })
+    $(".time>ul>li").click(function(){
+        $(this).children().addClass("disabled");
+        $(this).siblings().children().removeClass("disabled");
+        var actives=document.querySelectorAll("div.actives>div");
+        for(var j=0;j<16;j++){
+            actives[j].innerHTML="";
+        }
+        b=this.textContent;
+
+        ClassSearch(a,b);
+    })
+    //按分类、时间查找
+    function ClassSearch(){
+        $.ajax({
+            url: "/mypro/ClassSearch",
+            type: "get",
+            data:{classify:a,data:b},
+            success: function (result) {
+                if(result!=="404 found"){
+                    var html1=""
+                    var length=Math.ceil(result.length/16);
+                    for(var k= 1;k<=length;k++){
+                        html1+=`<li class='page-item'>
+                        <a href='#' class='page-link'>${k}</a>
+                    </li>`
+                    }
+                    $(".pagination").html(`
+                    <li class='page-item disabled'>
+                        <a href='#' class='page-link'>首页</a>
+                    </li>
+                    ${html1}
+                    <li class='page-item'>
+                        <a href='#' class='page-link'>尾页</a>
+                  </li>`)
+                var arr=result;
+                    if(arr.length>=16){arr.length=16}
+                var actives=document.querySelectorAll("div.actives>div");
+                for(var j=0;j<16;j++){
+                    actives[j].innerHTML="";
+                }
+                for(var i=0;i<arr.length;i++){
+                    actives[i].innerHTML=`
+                        <div class="card">
+                            <div class="prompt">
+                                <div class="prompt_name">${arr[i].state}</div>
+                                <div class="situation"></div>
+                            </div>
+                            <a href="active_details.html?photo=${arr[i].photo}" class="m-1" title="活动海报">
+                                <img src="${arr[i].photo}" class="picture" alt=""/>
+                            </a>
+                            <a href="active_details.html?photo=${arr[i].photo}" title="柚群活动详情">
+                                <div class="card_intr">
+                                    <h3>${arr[i].aname}</h3>
+                                    <p>
+                                        <img src="./img/17.png" alt=""/>${arr[i].time}
+                                    </p>
+                                    <p>
+                                        <img src="./img/18.png" alt=""/>${arr[i].address}
+                                    </p>
+                                    <div>
+                                        <span class="my_small number"><img src="./img/19.png"  alt=""/>${arr[i].anumber}</span>
+                                        <span class="my_color">${arr[i].money}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                }
+
+            }}
+        })
+        }
+    //图片数据加载
+    function jiazai(){
+        return new Promise(function(open){
+            $.ajax({
+                url:"/mypro/active1",
+                type:"get",
+                async: false,
+                data:{pageSize:1},
+                success:function(result){
+                    var arr=result.record;
+                    var $actives=$("div.actives>div");
+                    for(var i=0;i<$actives.length;i++){
+                        $actives[i].innerHTML=`
+                        <div class="card">
+                            <div class="prompt">
+                                <div class="prompt_name">${arr[i].state}</div>
+                                <div class="situation"></div>
+                            </div>
+                            <a href="active_details.html?photo=${arr[i].photo}" class="m-1" title="活动海报">
+                                <img src="${arr[i].photo}" class="picture" alt=""/>
+                            </a>
+                            <a href="active_details.html?photo=${arr[i].photo}" title="柚群活动详情">
+                                <div class="card_intr">
+                                    <h3>${arr[i].aname}</h3>
+                                    <p>
+                                        <img src="./img/17.png" alt=""/>${arr[i].time}
+                                    </p>
+                                    <p>
+                                        <img src="./img/18.png" alt=""/>${arr[i].address}
+                                    </p>
+                                    <div>
+                                        <span class="my_small number"><img src="./img/19.png"  alt=""/>${arr[i].anumber}</span>
+                                        <span class="my_color">${arr[i].money}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>`;
+                    }
+                }
+            })
+            open();
+        })
+    }
+    //自动生成底下分页栏
+    function fenye(){
+        return new Promise(function(open){
+            $.ajax({
+                url: "/mypro/pagesize",
+                type: "get",
+                async: false,
+                success: function (result) {
+                    var count=result.length;
+                    var pageSize=Math.ceil(count/16);
+                    var html1=""
+                    for(var k= 1;k<=pageSize;k++){
+                        html1+=`<li class='page-item' id="k">
+                        <a href='#' class='page-link'>${k}</a>
+                    </li>`
+                    }
+                    $(".pagination").html(`
+                    <li class='page-item active' >
+                        <a href='#' class='page-link'>首页</a>
+                    </li>
+                    ${html1}
+                    <li class='page-item'>
+                        <a href='#' class='page-link'>尾页</a>
+                  </li>`)
+
+                    $(".pagination li").click(function(){
+                        $li=$(this);
+                        $li.addClass("active");
+                        $li.siblings().removeClass("active")
+                        var a=this.textContent.trim();
+                        if(a=="首页"){
+                            a=1;
+                        }else if(a=="尾页"){
+                            a=pageSize;
+                        }
+                        page(a);
+                    })
+                }
+            })
+            open();
+        })
+        }
+    //分页显示功能
+    function page(a){
+        return new Promise(function(open){
+        $.ajax({
+            url:"/mypro/active1",
+            type:"get",
+            async: false,
+            data:{pageSize:a},
+            success:function(result){
+                var arr=result.record;
+                var $actives=$("div.actives>div");
+                for(var j=0;j<16;j++){
+                    $actives[j].innerHTML="";
+                }
+                for(var i=0;i<arr.length;i++){
+                    $actives[i].innerHTML=`
+                            <div class="card">
+                                <div class="prompt">
+                                    <div class="prompt_name">${arr[i].state}</div>
+                                    <div class="situation"></div>
+                                </div>
+                                <a href="active_details.html?photo=${arr[i].photo}" class="m-1" title="活动海报">
+                                    <img src="${arr[i].photo}" class="picture" alt=""/>
+                                </a>
+                                <a href="active_details.html?photo=${arr[i].photo}" title="柚群活动详情">
+                                    <div class="card_intr">
+                                        <h3>${arr[i].aname}</h3>
+                                        <p>
+                                            <img src="./img/17.png" alt=""/>${arr[i].time}
+                                        </p>
+                                        <p>
+                                            <img src="./img/18.png" alt=""/>${arr[i].address}
+                                        </p>
+                                        <div>
+                                            <span class="my_small number"><img src="./img/19.png"  alt=""/>${arr[i].anumber}</span>
+                                            <span class="my_color">${arr[i].money}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>`;
+                }
+            }
+        })
+        })
+    }
+    //阅览量
+    function bianli(){
+        return new Promise(function(open){
+            var cards=document.getElementsByClassName("card");
+            for(var card of cards){
+                card.onclick=function(){
+                    var num=this.querySelector("a>div>div>span:first-child");
+                    var n=parseInt(num.textContent);
+                    n++;
+                    var img=this.getElementsByClassName("picture")[0];
+                    var photo=img.getAttribute("src");
+                    xhr= new XMLHttpRequest();
+                    xhr.onreadystatechange=function(){
+                        if (xhr.readyState==4&&xhr.status==200){
+                            var result=xhr.responseText;
+                            num.innerHTML=`<img src="./img/19.png"  alt=""/>${n}`
+                        }
+                    }
+                    xhr.open("post","/mypro/inset",true);
+                    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                    var formdata=`anumber=${n}&photo=${photo}`;
+                    xhr.send(formdata)
+
+                }
+            }
+        })
+    }
+    window.onload=jiazai().then(fenye).then(bianli);
+</script>
+<script>
+    //分别点击四个活动，显示自己的视频
+    $("#video_details").on("click",function(e){
+       var src=$(e.target).parent().attr("data-target");
+        $(".big_video").attr({src});
+        $(e.target).parent().parent().addClass("video_show")
+                .siblings().removeClass("video_show")
+    })
+    //左右箭头切换视频
+    var left=document.getElementsByClassName("iconjiantouzuo")[0];
+    var right=document.getElementsByClassName("iconjiantouyou")[0];
+    left.onclick=function(){
+        //找到正在播放的视频链接
+        var video=document.getElementsByClassName("big_video")[0].getAttribute("src");
+        //找到所有a标签
+        var a=document.querySelectorAll("#video_details>li>a");
+        //遍历a标签
+        for (var i=0;i< a.length;i++){
+            if(video==a[i].getAttribute("data-target")){
+                a[i].parentElement.className="";
+                //找到上一个视频的链接i
+                if(i==0){
+                    i= a.length-1
+                    video=a[i].getAttribute("data-target");
+                    console.log(a[i])
+                    a[i].parentElement.className="video_show";
+
+                }else{
+                    i--;
+                    video=a[i].getAttribute("data-target");
+                    a[i].parentElement.className="video_show";
+                }
+                document.getElementsByClassName("big_video")[0].setAttribute("src",video);
+            }
+        }
+    }
+    right.onclick=function(){
+        //找到正在播放的视频链接
+        var video=document.getElementsByClassName("big_video")[0].getAttribute("src");
+        //找到所有a标签
+        var a=document.querySelectorAll("#video_details>li>a");
+        //遍历a标签
+        for (var i=0;i< a.length;i++){
+            if(video==a[i].getAttribute("data-target")){
+                a[i].parentElement.className="";
+                //找到下一个视频的链接i
+                if(i==(a.length-1)){
+                    video=a[0].getAttribute("data-target");
+                    a[0].parentElement.className="video_show";
+
+                }else{
+                    i++;
+                    video=a[i].getAttribute("data-target");
+                    console.log(a[i])
+                    a[i].parentElement.className="video_show";
+                }
+                document.getElementsByClassName("big_video")[0].setAttribute("src",video);
+            }
+        }
+    }
+    var btn1=document.getElementsByClassName("iconbofang")[0];
+    btn1.onclick=function(){
+        document.getElementsByClassName("big_video")[0].setAttribute("src","./img/1_HearthStone_HEA_2018-14334_hse_TB_Rastakhans_Rumble_zhCN_URL_ONLY_PK_small.mp4");
+        var a=document.querySelectorAll("#video_details>li>a");
+        for (var i=0;i< a.length;i++){
+        a[i].parentElement.className="";
+        a[0].parentElement.className="video_show";
+        }
+    }
+     var btn2=document.getElementsByClassName("iconbofang")[1];
+    btn2.onclick=function(){
+        document.getElementsByClassName("big_video")[0].setAttribute("src","./img/1_HearthStone_BoomsdayProject.mp4");
+        var a=document.querySelectorAll("#video_details>li>a");
+        for (var i=0;i< a.length;i++){
+            a[i].parentElement.className="";
+            a[1].parentElement.className="video_show";
+        }
+    }
+</script>
+</body>
+</html>

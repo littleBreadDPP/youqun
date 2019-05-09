@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <link rel="stylesheet" href="./css/conmm.css"/>
+    <link rel="stylesheet" href="./css/active_details.css"/>
+    <link rel="stylesheet" href="./css/iconfont.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <!-- 头部导航栏-->
+    <div class="row top">
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <a href="#" title="柚群"><img src="./img/logo.png" alt="" class="w-25 p-3 ml-5" />
+                <span>引爆社群价值</span></a>
+        </div>
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item mr-5">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/index.html">首页</a>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/active.html" >活动</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">运动户外</a></li>
+                        <li><a href="#" class="text-white">交友聚会</a></li>
+                        <li><a href="#" class="text-white">演出展览</a></li>
+                        <li><a href="#" class="text-white">亲子教育</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/group.html">社群</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">游戏兴趣类</a></li>
+                        <li><a href="#" class="text-white">学习考试类</a></li>
+                        <li><a href="#" class="text-white">社交聚会类</a></li>
+                        <li><a href="#" class="text-white">行业交流类</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a4">
+                    <a href="#" id="localname"></a>
+                    <ul class="a3">
+                        <li><a href="#" class="text-white">个人中心</a></li>
+                        <li><a href="#" class="text-white">注销</a></li>
+                    </ul>
+                    <a  class="nav-link p-0" href="http://127.0.0.2:8080/login.html">登录</a></li>
+                <li class="nav-item mr-5"><a  class="nav-link p-0" href="http://127.0.0.2:8080/reg.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container">
+
+</div>
+<footer>
+    <div class="row foot1 text-white my_small align-items-center p-2">
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">关于柚群 </dt>
+                <dd class="my_act">用户协议</dd>
+                <dd class="my_act">产品介绍</dd>
+                <dd class="my_act">团队简介</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl class="main">
+                <dd class="my_act">版权说明</dd>
+                <dd class="my_act">帮助中心</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">联系我们</dt>
+                <dd>
+                    商务咨询：138-9199-5640（专线）
+                </dd>
+                <dd>
+                    客服热线：177-4232-9144（专线）
+                </dd>
+                <dd>
+                    办公地址：西安市碑林区南二环西段69号创新设计中心1409
+                </dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <ul class="list-unstyled">
+                <li><p>微信官方公众号</p></li>
+                <li><img src="./img/QRcode.jpg" class="w-25" alt=""></li>
+                <li><p class="m-0">搜索："柚群"</p></li>
+                <li>
+                    <div id="pop-up">
+                        <button class="shut">&times;</button>
+                        <img src="./img/QRcode.jpg" class="w-75">
+                        <a href="#">扫一扫</a>
+                        <a href="#">进入柚群手机版</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row foot2 p-2 my_small">
+        <div class="col-sm-12 col-lg-6 foot2_left">
+            <span class="text-white">版权所有：西安美刻信息科技有限公司</span>
+        </div>
+        <div class="col-sm-12 col-lg-6 foot2_right">
+            <span><a href="#" class="text-white">陕ICP备16001937号-3</a></span>
+        </div>
+    </div>
+</footer>
+<script>
+    //右边固定框
+    var shut=document.getElementsByClassName("shut")[0];
+    var pop_up=document.getElementById("pop-up");
+    shut.onclick=function(){
+        pop_up.className="none";
+    }
+	//更换登录名
+	$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+	var name=sessionStorage.getItem("key");
+	if(name.indexOf("欢")!==-1){
+		console.log(1)
+		$("#localname").removeClass("none").html(name).parent().addClass("a4").children(":last-child").addClass("none").parent().next().addClass("none");
+	}else{
+		console.log(2)
+		
+	}
+	$(".a3>li:last-child").click(function(){
+		if(confirm("确认注销吗？")){
+			sessionStorage.removeItem("key");
+			$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+		}
+	})
+
+
+    //图片数据加载
+    var photo="";
+    function getInfo(){
+        return new Promise(function(open){
+            //获取url传递过来的photo参数
+            var urlParams=new URLSearchParams(location.search);
+            photo=urlParams.get("photo");
+            //1.创建异步对象
+            var xhr=new XMLHttpRequest();
+            //2.绑定监听
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    console.log("页面加载完成")
+                    var result=xhr.responseText;
+                    //把json串解析成js对象
+                    var arr=JSON.parse(result);
+                    var details=document.querySelector("div.container")
+                    details.innerHTML=`
+                        <ul class="breadcrumb my_small my_crumb_color mt-4">
+                            <li class="breadcrumb-item">
+                                <a href="#" class=" text-dark" >首页</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#" class=" text-dark">活动</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#" class="my_crumb" id="name">${arr.dname}</a>
+                            </li>
+                        </ul>
+                            <div>
+                            <table class="w-100 mb-5">
+                            <tr>
+                            <td class="myPicture">
+                            <img src="${arr.photo}" class="w-100" alt=""/>
+                            <div id="mask" class="position-absolute d-none"></div>
+                            <div id="super-mask" class="position-absolute"></div>
+                            <div id="div-lg" class="position-absolute d-none  lg_picture" data-img="${arr.bigPhoto}"></div>
+                            </td>
+                            <td class="pl-3">
+                            <h3 class="d-inline-block my_header_size pr-2">${arr.dname}</h3>
+                            <span class="btn-warning text-white p-1 my_small">${arr.dstate}</span>
+                            <hr/>
+                            <div class="mb-2">
+                            <div class=" my_size">
+                                <img src="./img/20.png" class="picture_width2" alt=""/> ${arr.dtime}
+                            </div>
+                            <div class=" my_size">
+                                <img src="./img/21.png"  class="picture_width2" alt=""/>${arr.daddress}
+                            </div>
+                            <div class=" my_size ml-1"id="dnum"><img src="./img/u=3227388648,3178569383&fm=26&gp=0.jpg"  class="picture_width3" alt=""/>报名人数：${arr.dnum}</div>
+                            </div>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td></td>
+                            <td>
+                            <div class="jianjie my_small mb-4 ml-4">${arr.dintr}</div>
+                            <button class="btn btn-warning text-white my_small p-1 ml-4" data-target="#demo" data-toggle="modal"> 报名</button>
+                            <div class="modal" id="demo">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header my_bg_color">
+                            <h5>报名信息填写</h5>
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                活动名称：<input type="text" class="w-75 form-control m-auto" id="eactive"/>
+                                姓名：<input type="text" class="w-75 form-control m-auto" id="ename"/>
+                                联系电话：<input type="text" class="w-75 form-control m-auto" id="ephone"/>
+                                邮箱：<input type="text" class="w-75 form-control m-auto" id="e_email"/>
+                                公司：<input type="text" class="w-75 form-control m-auto" id="company"/>
+                                职位：<input type="text" class="w-75 form-control m-auto" id="job"/>
+                            </div>
+                            <div class="modal-footer">
+                            <button id="btn1" class="btn btn-warning"">提交</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </td>
+                            </tr>
+                            </table>
+                            <div>
+                                <div id="echat" style="width:500px;height: 300px;"></div> 
+                                <p>${arr.p1}</p>
+                                <p>${arr.p2}</p>
+                                <p>${arr.p3}</p>
+                                <p>${arr.p4}</p>
+                                <p>${arr.p5}</p>
+                                <p>${arr.p6}</p>
+                                <p>${arr.p7}</p>
+                                <p>${arr.p8} </p>
+                            </div>
+                            </div>
+                            <div class="mt-5 mb-5">
+                                <div id="comment">
+                                    <p>
+                                        <textarea name="" id="" cols="155" rows="5" placeholder="留点什么吧..."></textarea>
+                                    </p>
+                                    <p>
+                                        <button class="btn btn-warning">评论</button>
+                                    </p>
+                                </div>
+                                <div id="contain">
+
+                                </div>
+                            </div>`
+
+                    console.log("页面加载完成")
+                    $("#comment>p>button").click(function(){
+                        var contain=$("#comment>p>textarea").val();
+                        var title=$("#name").text();
+                        var ctime=new Date();
+                        var y=ctime.getFullYear();
+                        var m=ctime.getMonth()+1;
+                        var d=ctime.getDate();
+                        var h=ctime.getHours();
+                        var mi=ctime.getMinutes();
+                        var s=ctime.getSeconds();
+                        if(m<10){m="0"+m};
+                        if(d<10){d="0"+d};
+                        if(h<10){h="0"+h};
+                        if(mi<10){mi="0"+mi};
+                        if(s<10){s="0"+s};
+                        ctime=`${y}-${m}-${d} ${h}:${mi}:${s}`;
+                        var name=sessionStorage.getItem("key");
+                        var cname=name;
+                        comment1(contain,title,ctime,cname);
+                    })
+                    //获取容器
+                    var main=document.getElementById("echat")
+                    //创建echarts对象
+                    var mychart=echarts.init(main)
+                    //创建option配置对象
+                    var option={
+                        title:{text:`${arr.ptitle}`},
+                        xAxis:{data:[`${arr.x1}`,`${arr.x2}`,`${arr.x3}`,`${arr.x4}`]},//x轴数据
+                        yAxis:{},  //y轴数据
+                        series:[{type:"bar",data:[`${arr.y1}`,`${arr.y2}`,`${arr.y3}`,`${arr.y4}`],itemStyle:{
+                                    normal:{
+                                        color:'#e45926'
+                                    }
+                                }}]
+                    }
+                    //将配置对象添加echart
+                    mychart.setOption(option)
+
+                }
+            }
+            //3.打开链接
+            xhr.open("get","/mypro/query?photo="+photo,false);
+            //4.发送请求
+            xhr.send(null);
+            open();
+        })
+    }
+	//放大镜
+    function dpp(){
+        return new Promise(function(open){
+			//放大镜
+            var $myPicture=$(".myPicture");
+            $myPicture.mousemove(function(){
+                var backgroundImage=`url(${$("#div-lg").attr("data-img")})`;
+                $("#div-lg").css({backgroundImage});
+			})
+			$mask=$("#mask")//半透明黄色遮罩层
+			var $smask=$("#super-mask")//全透明同位置等大小的上层保护层div，保护下层的mImg和mask
+			//当鼠标进出上层保护层div时，让遮罩层mask和大图片切换显示隐藏
+			$smask.hover(function(){
+			$("#mask,#div-lg").toggleClass("d-none")
+			})
+			$smask.mousemove(function(e){
+			  var top=e.offsetY-50;
+			  var left=e.offsetX-50;
+			  if(left<0) left=0;
+			  else if(left>100) left=100;
+			  if(top<0) top=0;
+			  else if(top>50) top=50;
+			  $mask.css({top,left});
+			  $("#div-lg").css("background-position",`-${left*4}px -${top*4}px`)
+			})
+			//取出本次活动名称
+            var eactive=document.getElementById("eactive");
+            var name=document.getElementById("name");
+            eactive.value=name.innerHTML;
+            open();
+        })
+    }
+    //评论存储
+    function comment1(contain,title,ctime,cname){
+        if(!cname){
+            alert("请登录")
+        }else{
+            cname=cname.slice(2);
+            $.ajax({
+                url:"/mypro/comment1",
+                type:"post",
+                data:{contain:contain,title:title,ctime:ctime,cname:cname},
+                success:function(result){
+                    alert(result);
+                    comment2();
+                }
+
+            })
+        }
+    }
+    //评论显示
+    function comment2(){
+        return new Promise(function(open){
+            var title=$("#name").text();
+            $.ajax({
+                url:"/mypro/comment2",
+                type:"get",
+                data:{title:title},
+                success:function(result){
+                    var arr=result;
+                    $("#contain")[0].innerHTML="";
+                    $("#comment>p>textarea").val("");
+                    for(var i=0;i<arr.length;i++){
+                        $("#contain")[0].innerHTML+=`<hr>
+                                    <div>
+                                        <div>
+                                            <span class="iconfont iconicon24"><span>${arr[i].cname}</span></span>
+                                            <span>${arr[i].ctime}</span>
+                                        </div>
+                                        <p>${arr[i].contain}</p>
+                                    </div>`
+                    }
+                    console.log($("#contain")[0].innerHTML)
+                }
+
+            })
+            open();
+        })
+    }
+    //活动报名
+    function enlist(){
+        return new Promise(function(open){
+
+            var eactive=document.getElementById("eactive");
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if (xhr.readyState==4&&xhr.status==200){
+                    var result=xhr.responseText;
+                    alert(result);
+                    if(result=="报名成功"){
+
+                        var dnum=document.getElementById("dnum");
+                        var num=dnum.textContent.slice(5);
+                        console.log(num);
+                        num++;
+                        console.log(num);
+                        dnum.innerHTML=`<img src="./img/u=3227388648,3178569383&fm=26&gp=0.jpg"  class="picture_width3"    alt=""/>报名人数：${num}`;
+                        Enrollment();
+                        window.history.go(0)
+                        /*
+                         var photo=location.search;
+                         getInfo(photo);
+                         body=document.body;
+                         var drop=document.getElementsByClassName("modal-backdrop")[0];
+                         body.removeChild(drop);*/
+                        //
+
+                    }
+                }
+            }
+            xhr.open("post","/mypro/enroll",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var formdata="eactive="+eactive.value+"&ename="+ename.value+"&ephone="+ephone.value+"&e_email="+e_email.value+"&company="+company.value+"&job="+job.value;
+            xhr.send(formdata);
+            open();
+        })
+    }
+    //报名人数更改
+    function  Enrollment(){
+        return new Promise(function(open){
+            var dname=document.getElementById("eactive").value;
+            var dnum=document.getElementById("dnum").textContent.slice(5);
+            xhr= new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if (xhr.readyState==4&&xhr.status==200){
+                    var result=xhr.responseText;
+                }
+            }
+            xhr.open("post","/mypro/enrollnum",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            var formdata=`dnum=${dnum}&dname=${dname}`;
+            xhr.send(formdata);
+            open(eactive);
+        })
+    }
+    getInfo().then(dpp).then(comment2);
+    $("#btn1").click(enlist);
+</script>
+</body>
+</html>

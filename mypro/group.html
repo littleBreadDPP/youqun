@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/conmm.css"/>
+    <link rel="stylesheet" href="css/group.css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <!-- 头部导航栏-->
+    <div class="row top">
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <a href="#" title="柚群"><img src="./img/logo.png" alt="" class="w-25 p-3 ml-5" />
+                <span>引爆社群价值</span></a>
+        </div>
+        <div class="col-lg-6 col-sm-12 align-self-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item mr-5">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/index.html">首页</a>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/active.html" >活动</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">运动户外</a></li>
+                        <li><a href="#" class="text-white">交友聚会</a></li>
+                        <li><a href="#" class="text-white">演出展览</a></li>
+                        <li><a href="#" class="text-white">亲子教育</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a2 position-relative">
+                    <a  class="nav-link" href="http://127.0.0.2:8080/group.html">社群</a>
+                    <ul class="a1">
+                        <li><a href="#" class="text-white">游戏兴趣类</a></li>
+                        <li><a href="#" class="text-white">学习考试类</a></li>
+                        <li><a href="#" class="text-white">社交聚会类</a></li>
+                        <li><a href="#" class="text-white">行业交流类</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mr-5 a4">
+                    <a href="#" id="localname"></a>
+                    <ul class="a3">
+                        <li><a href="#" class="text-white">个人中心</a></li>
+                        <li><a href="#" class="text-white">注销</a></li>
+                    </ul>
+                    <a  class="nav-link p-0" href="http://127.0.0.2:8080/login.html">登录</a></li>
+                <li class="nav-item mr-5"><a  class="nav-link p-0" href="http://127.0.0.2:8080/reg.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <!-- 中间的内容-->
+    <div>
+        <!-- 导航栏-->
+        <div class="navbar  navbar-light mb-4 mt-5 p-0 pl-3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link my_small">首页  /  活动</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 搜索-->
+        <div class="input-group mb-4">
+            <input type="text" class="form-control my_small w-75" placeholder="请输入搜索内容"/>
+            <button class="btn btn-default w-25">搜索</button>
+        </div>
+        <!-- 社群界面-->
+        <div class="row m-auto pb-5">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601489.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                         <div class="text-dark mb-3 mt-1">
+                            <h6>泥巴创客空间</h6>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">泥巴创客空间成立于2014年4月，是一个以创业为主题的社交学习社群，通过为会员提供创新创业课程、软硬件课程、创业社交、资源对接、早期投资、场地设备等服务和组织各种创新创业主题活动来帮助会员实现从0到1创业项目的落地。空间以“改善创新环境，实现人人梦想”为愿景，现今已经产生大量的优秀创业项目，累计获得风险投资近亿元。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601526.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>红酒爱好者俱乐部</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">红酒爱好者分享交流，学习红酒文化知识，以酒会友，以酒结友。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601515.jpeg" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>喜马西安读书会</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">因为喜马拉雅，我们彼此成为听友
+                                因为喜马西安读书会，我们彼此成为亲友
+                                尘世喧嚣、人生匆忙
+                                静下来读一本书，听一段音频
+                                感受字里行间的温暖与智慧
+                                是人生最幸福的事
+                                喜马拉雅西安读书会邀你加入
+                                一起学习
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-07-26-10-27-21.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>贝塔阅读分享会</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">欢迎和我们一起走在智慧的道路上</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row m-auto pb-5">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601523.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>托福写作交流群</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">分享托福写作各种福利课程</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601517.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>西安情感论坛</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">本群各种情感问题，情感挽回，情感咨询，一对一跟进服务</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-09-28-11-08-51.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>浅知读书会</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">用读书打造一个资源共享平台
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-07-24-10-17-13.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>视通影像俱乐部</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">专业影像俱乐部</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row m-auto pb-5">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-11-13-14-29-29.png.jpg" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>欢造社</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">西安创客造物社群</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-11-20-14-50-32.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>西安活动图鉴</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">西安线下活动图鉴～～</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-11-19-15-08-11.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>她长安石榴群</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">她长安会员群
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-12-05-22-57-59.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>万色城</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">万色城社群管理系统</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row m-auto pb-5">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/1527601509.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>爬山</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">爬山</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-09-30-10-31-01.png.jpg" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>微社联盟</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">大学生活动发布交流平台</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-08-20-11-31-42.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>西安穿衣搭配分享群</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">分享日常穿搭，一起变美
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card my_card-width border-top-0 pr-3 pl-3">
+                    <a href="#" title="社群海报">
+                        <img src="./img/2018-09-10-15-47-35.png" class="w-100 pr-3 pl-3 picture" alt=""/>
+                    </a>
+                    <a href="#" title="社群详情">
+                        <div class="text-dark mb-3 mt-1">
+                            <h5>木奇读书会</h5>
+                            <p class="my_width truncate input-group-text border-0 bg-white p-0 my_small">赤峰喜欢阅读人的圈子。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底下的分页-->
+    <ul class="pagination pagination-sm mb-5">
+        <li class="page-item disabled">
+            <a href="#" class="page-link">首页</a>
+        </li>
+        <li class="page-item active">
+            <a href="#" class="page-link">1</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">2</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">3</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">4</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">5</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">6</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">7</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">8</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">9</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">10</a>
+        </li>
+        <li class="page-item">
+            <a href="#" class="page-link my_color">尾页</a>
+        </li>
+    </ul>
+</div>
+<footer>
+    <div class="row foot1 text-white my_small align-items-center p-2">
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">关于柚群 </dt>
+                <dd class="my_act">用户协议</dd>
+                <dd class="my_act">产品介绍</dd>
+                <dd class="my_act">团队简介</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl class="main">
+                <dd class="my_act">版权说明</dd>
+                <dd class="my_act">帮助中心</dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <dl>
+                <dt class="mb-2">联系我们</dt>
+                <dd>
+                    商务咨询：138-9199-5640（专线）
+                </dd>
+                <dd>
+                    客服热线：177-4232-9144（专线）
+                </dd>
+                <dd>
+                    办公地址：西安市碑林区南二环西段69号创新设计中心1409
+                </dd>
+            </dl>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3 text-center">
+            <ul class="list-unstyled">
+                <li><p>微信官方公众号</p></li>
+                <li><img src="./img/QRcode.jpg" class="w-25" alt=""></li>
+                <li><p class="m-0">搜索："柚群"</p></li>
+                <li>
+                    <div id="pop-up">
+                        <button class="shut">&times;</button>
+                        <img src="./img/QRcode.jpg" class="w-75">
+                        <a href="#">扫一扫</a>
+                        <a href="#">进入柚群手机版</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row foot2 p-2 my_small">
+        <div class="col-sm-12 col-lg-6 foot2_left">
+            <span class="text-white">版权所有：西安美刻信息科技有限公司</span>
+        </div>
+        <div class="col-sm-12 col-lg-6 foot2_right">
+            <span><a href="#" class="text-white">陕ICP备16001937号-3</a></span>
+        </div>
+    </div>
+</footer>
+<script>
+	//更换登录名
+	$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+	var name=sessionStorage.getItem("key");
+	if(name.indexOf("欢")!==-1){
+		console.log(1)
+		$("#localname").removeClass("none").html(name).parent().addClass("a4").children(":last-child").addClass("none").parent().next().addClass("none");
+	}else{
+		console.log(2)
+		
+	}
+	$(".a3>li:last-child").click(function(){
+		if(confirm("确认注销吗？")){
+			sessionStorage.removeItem("key");
+			$("#localname").addClass("none").parent().removeClass("a4").children(":last-child").removeClass("none").parent().next().removeClass("none");
+		}
+	})
+    var shut=document.getElementsByClassName("shut")[0];
+    var pop_up=document.getElementById("pop-up");
+    shut.onclick=function(){
+        pop_up.className="none";
+    }
+</script>
+</body>
+</html>

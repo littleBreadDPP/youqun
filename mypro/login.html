@@ -1,0 +1,64 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/conmm.css"/>
+</head>
+<body>
+<div class="main row">
+	<div class="col-md-6 col-sm-12 align-self-center">
+		<img src="./img/16.png" class="w-100" alt="">
+	</div>
+	<div class="col-md-6 col-sm-12">
+		<div id="registe">
+			<img src="./img/logo.png" alt="">
+			<p>
+				<span><a href="http://127.0.0.2:8080/reg.html">新用户注册</a></span>
+			</p>
+			<div>
+				<input type="text" id="uname" class="my_small pl-3" placeholder="请输入用户名" autocomplete="on">
+			</div>
+			<div>
+				<input type="password" id="upwd"  class="my_small pl-3" placeholder="请输入密码" autocomplete="on">
+			</div>
+			<div class="auto">
+				<input type="checkbox" id="remember">
+				<label for="remember">自动登录</label>
+				<span><a href="#">忘记密码？</a></span>
+			</div>
+			<button onclick="login()">登录</button>
+		</div>
+	</div>
+</div>
+<script>
+	function login(){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				alert(result);
+				if(result=="登录成功"){
+					sessionStorage.setItem('key',"欢迎 "+formdata.split("=")[1].split("&")[0]);
+					location.href='http://127.0.0.2:8080/index.html'
+				}
+
+			}
+		}
+		xhr.open("post","/mypro/login",true);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		var formdata="uname="+uname.value+"&upwd="+upwd.value;
+		console.log(formdata);
+		xhr.send(formdata);
+	}
+
+</script>
+</body>
+</html>
